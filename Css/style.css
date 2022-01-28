@@ -46,7 +46,6 @@ html {
     }
 }
 
-
 /* End Global Css */
 
 /* Start Home */
@@ -56,7 +55,6 @@ html {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    position: relative
 }
 
 .home::before {
@@ -67,57 +65,56 @@ html {
     background-color: rgb(23 33 56 / 50%);
 }
 
-.home .container header {
+.home header .container {
+    display: flex;
+    align-items: center;
     position: relative;
-    height: 100px;
-    border-bottom: 1px solid var(--white-color);
+    min-height: 92px;
 }
 
-.home .container header .part-top {
-    height: 100%;
+.home header .container::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: calc(100% - 40px);
+    height: 1px;
+    top: 99%;
+    left: 20px;
+}
+
+.home header .container a.logo {
+    display: block;
+    width: fit-content;
+}
+
+.home header .container a.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.home header .container nav.navigation {
+    flex: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
-.home .container header i {
-    font-size: 20px;
-    color: var(--white-color);
-}
-
-.home .container header .part-top>div i.fa-bars {
-    cursor: pointer;
-}
-
-.home .container header i.fa-search {
-    padding: 5px 0 5px 20px;
-    margin-left: 15px;
-    border-left: 1px solid white;
-}
-
-.home .container header nav {
-    display: flex;
-    flex-direction: column;
-    width: calc(100% + 40px);
-    transform: translateX(-20px);
-    display: none;
-}
-
-.home .container header nav i.fa-search {
-    display: none;
-}
-
-.home .container header nav.show {
-    display: flex;
-}
-
-.home .container header nav ul {
+.home header .container nav.navigation ul.links {
     list-style: none;
     padding: 0;
     margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
 }
 
-.home .container header nav ul li a {
+.home header .container nav.navigation ul.show {
+    display: block;
+}
+
+.home header .container nav.navigation ul li a {
     font-weight: 600;
     font-size: 13px;
     display: block;
@@ -127,49 +124,50 @@ html {
     padding: 15px;
     background-color: rgb(23 33 56 / 50%);
     transition: color 0.3s, border-bottom 0.3s;
+
 }
 
-.home .container header nav ul li:first-child a,
-.home .container header nav ul li a:hover {
+.home header .container nav.navigation ul li:first-child a,
+.home header .container nav.navigation ul li a:hover {
     color: var(--main-color);
     border-bottom: 2px solid var(--main-color);
+    position: relative;
+    z-index: 2;
 }
 
+.home header .container nav.navigation i {
+    font-size: 20px;
+    color: var(--white-color);
+}
+
+.home header .container nav.navigation i.icon-search {
+    padding: 5px 0 5px 20px;
+    margin-left: 15px;
+    border-left: 1px solid white;
+}
+
+.home header .container nav.navigation i.icon-menu {
+    cursor: pointer;
+}
+
+/* Medium Screens  */
 @media (min-width: 768px) {
-    .home .container header {
+
+    .home header .container nav.navigation ul.links {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .home .container header .part-top>div {
-        display: none;
-    }
-
-    .home .container header nav i.fa-search {
-        display: inline-block;
-    }
-
-    .home .container header nav {
-        flex-direction: row;
+        position: initial;
+        top: initial;
+        left: initial;
         width: initial;
-        transform: initial;
-        height: 100%;
-        line-height: 99px;
-        position: relative;
     }
 
-    .home .container header nav ul li a {
-        padding: 0 10px;
+    .home header .container nav.navigation ul li a {
         background-color: initial;
+        padding: 38px 10px;
     }
 
-    .home .container header nav i.fa-search {
-        align-self: center;
-    }
-
-    .home .container header nav ul {
-        display: flex;
+    .home header .container nav.navigation i.icon-menu {
+        display: none;
     }
 }
 

@@ -8,10 +8,10 @@
     <title>Kasper | Template </title>
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="Css/style.css">
-    <!-- Normalize -->
-    <link rel="stylesheet" href="Css/normalize.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="Css/all.min.css">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="Css/normalize.css">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,37 +23,32 @@
 <body>
     <!-- Start Home-->
     <div class="home">
-        <div class="container">
-            <header>
-                <div class="part-top">
-                    <a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
-                    <div>
-                        <i class="fas fa-bars" onclick="myFunction()"></i>
-                        <i class="fas fa-search"></i>
-                    </div>
-                </div>
-                <nav id="navigation">
-                    <ul>
+        <header>
+            <div class="container">
+                <a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
+                <nav class="navigation">
+                    <i class="fas fa-bars icon-menu" onclick="myFunction()"></i>
+                    <ul id="id-links" class="links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#portoflio">Portfolio</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <i class="fas fa-search"></i>
                     </ul>
+                    <i class="fas fa-search icon-search"></i>
                 </nav>
-            </header>
-            <div class="info"></div>
-            <div class="left-arrow"></div>
-            <div class="right-arrow"></div>
-            <div class="navigation"></div>
-        </div>
+            </div>
+        </header>
+        <div class="info"></div>
+        <div class="left-arrow"></div>
+        <div class="right-arrow"></div>
+        <div class="navigation"></div>
     </div>
     <!-- End Home-->
     <script>
         function myFunction() {
-            var element = document.getElementById("navigation");
+            var element = document.getElementById("id-links");
             element.classList.toggle("show");
         }
     </script>
