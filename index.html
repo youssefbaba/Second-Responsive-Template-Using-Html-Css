@@ -23,13 +23,14 @@
 <body>
     <!-- Start Home-->
     <div class="home">
+        <!-- Start Header  -->
         <header>
             <div class="container">
                 <a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
                 <nav class="navigation">
                     <i class="fas fa-bars icon-menu" onclick="myFunction()"></i>
                     <ul id="id-links" class="links">
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="#home" class="active">Home</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#portoflio">Portfolio</a></li>
                         <li><a href="#about">About</a></li>
@@ -40,12 +41,42 @@
                 </nav>
             </div>
         </header>
-        <div class="info"></div>
-        <div class="left-arrow"></div>
-        <div class="right-arrow"></div>
-        <div class="navigation"></div>
+        <!-- End Header  -->
+        <!-- Start Info -->
+        <div class="info">
+            <div class="content">
+                <h2>Hello World!</h2>
+                <h2>We are Kasper,we make art.</h2>
+                <p>
+                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+                    tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem.
+                    Mauris
+                    blandit aliquet elit, eget tincidunt.
+                </p>
+            </div>
+        </div>
+        <!-- End Info -->
+        <!-- Start Navigation Arrow  -->
+        <div class="navigation-arrow left-arrow">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="navigation-arrow  right-arrow">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <!-- End Navigation Arrow  -->
+        <!-- End Navigation Bullet  -->
+        <div class="navigation-bullet">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <!-- End Navigation Bullet  -->
     </div>
     <!-- End Home-->
+    <!-- Start Services -->
+    <!-- End Services -->
     <script>
         function myFunction() {
             var element = document.getElementById("id-links");
