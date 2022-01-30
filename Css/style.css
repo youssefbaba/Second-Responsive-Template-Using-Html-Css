@@ -51,7 +51,7 @@ html {
     margin: auto;
     margin-bottom: var(--section-padding);
     text-align: center;
-    position: relative;
+    /* position: relative; */
 }
 
 .intro-section h2 {
@@ -62,24 +62,25 @@ html {
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 40px;
+    position: relative;
 }
 
-.intro-section::before,
-.intro-section::after {
+.intro-section h2::before,
+.intro-section h2::after {
     content: "";
     position: absolute;
-    top: 50%;
+    top: calc(100% + 15px);
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.intro-section::before {
+.intro-section h2::before {
     background-color: var(--third-color);
     width: 40%;
     height: 2px;
 }
 
-.intro-section::after {
+.intro-section h2::after {
     background-color: var(--white-color);
     width: 15px;
     height: 15px;
