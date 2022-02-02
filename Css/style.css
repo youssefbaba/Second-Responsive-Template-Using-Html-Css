@@ -18,8 +18,11 @@ html {
     --third-color: #1f2021;
     --section-padding: 60px;
     --regular-weight: 400;
+    --semibold-weight: 600;
     --main-transition: 0.3s;
     --size-paragraph: 13px;
+    --overlay-background: rgb(23 33 56 / 70%);
+
 }
 
 .container {
@@ -50,7 +53,7 @@ html {
 
 /* Start Component */
 .intro-section {
-    max-width: 370px;
+    max-width: 400px;
     margin: auto;
     margin-bottom: var(--section-padding);
     text-align: center;
@@ -71,7 +74,7 @@ html {
 .intro-section h2::after {
     content: "";
     position: absolute;
-    top: calc(100% + 15px);
+    top: calc(100% + 20px);
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -99,10 +102,6 @@ html {
 }
 
 @media (min-width: 992px) {
-    .intro-section {
-        max-width: 400px;
-    }
-
     .intro-section h2 {
         font-size: 50px;
     }
@@ -121,7 +120,7 @@ html {
 /* Start Header */
 .home {
     min-height: 100vh;
-    background-color: rgb(23 33 56 / 70%);
+    background-color: var(--overlay-background);
     background-image: url("../images/background-home.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -136,7 +135,7 @@ html {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgb(23 33 56 / 70%);
+    background-color: var(--overlay-background);
 }
 
 .home header .container {
@@ -191,14 +190,14 @@ html {
 }
 
 .home header .container nav.navigation ul li a {
-    font-weight: 600;
+    font-weight: var(--semibold-weight);
     font-size: var(--size-paragraph);
     display: block;
     text-decoration: none;
     text-transform: uppercase;
     color: var(--white-color);
     padding: 15px;
-    background-color: rgb(23 33 56 / 70%);
+    background-color: var(--overlay-background);
     transition: color var(--main-transition), border-bottom var(--main-transition);
 
 }
@@ -206,7 +205,7 @@ html {
 .home header .container nav.navigation ul li:first-child a,
 .home header .container nav.navigation ul li a:hover {
     color: var(--main-color);
-    border-bottom: 2px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
     position: relative;
     z-index: 2;
 }
@@ -314,7 +313,6 @@ html {
     }
 }
 
-
 /* End Info */
 /* Start Nvigation Arrow */
 .navigation-arrow {
@@ -331,8 +329,7 @@ html {
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
-        transition: background-color var(--main-transition),
-            border-color var(--main-transition);
+        transition: background-color var(--main-transition), border-color var(--main-transition);
     }
 
     .navigation-arrow i {
@@ -402,7 +399,6 @@ html {
 
 .services .container .content-section-services .service {
     text-align: center;
-    /* padding: 30px; */
 }
 
 .services .container .content-section-services .service .icon i {
@@ -491,7 +487,7 @@ html {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgb(23 33 56 / 70%);
+    background-color: var(--overlay-background);
 }
 
 .phone-advertise .image-phone {
@@ -596,7 +592,7 @@ html {
     font-size: var(--size-paragraph);
     line-height: 3.46;
     letter-spacing: 0.65px;
-    transition: var(--main-transition);
+    transition: background-color var(--main-transition), color var(--main-transition);
 }
 
 .portfolio .container .tags ul li a {
@@ -698,7 +694,7 @@ html {
 .gallery-images .box img {
     display: block;
     width: 100%;
-    transition: 0.3s;
+    transition: transform var(--main-transition);
 }
 
 .gallery-images .box:hover img {
@@ -756,7 +752,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(23 33 56 / 70%);
+    background-color: var(--overlay-background);
 }
 
 .video>video {
@@ -775,7 +771,7 @@ html {
 }
 
 .video .video-info h2 {
-    font-weight: 600;
+    font-weight: var(--semibold-weight);
     font-size: 20px;
     text-transform: uppercase;
     margin: 0;
@@ -800,7 +796,7 @@ html {
     letter-spacing: 0.63px;
     color: var(--white-color);
     background-color: var(--third-color);
-    transition: 0.3s;
+    transition: background-color var(----main-transition), color var(--main-transition);
 }
 
 .video .video-info a:hover {
@@ -867,7 +863,7 @@ html {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgb(23 33 56 / 70%);
+    background-color: var(--overlay-background);
 }
 
 .static .container .statics {
@@ -1035,11 +1031,13 @@ html {
     height: 15px;
     border: 1px solid var(--third-color);
     border-radius: 50%;
-    transition: background-color var(--main-transition);
+    transition: background-color var(--main-transition), border-color var(--main-transition);
+    cursor: pointer;
 }
 
 .testimonials-skills .container .testimonials .bullets ul li:first-child {
     background-color: var(--main-color);
+    border-color: var(--main-color);
 }
 
 .testimonials-skills .container .testimonials .bullets ul li:hover {
@@ -1199,8 +1197,6 @@ html {
 
 /* End Testimonials Skills */
 /* Start Quote */
-
-
 .quote {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
@@ -1228,7 +1224,7 @@ html {
 }
 
 .quote .container .content-section-quote blockquote {
-    font-weight: 600;
+    font-weight: var(--semibold-weight);
     font-size: 25px;
     line-height: 1.4;
     text-transform: uppercase;
@@ -1250,7 +1246,7 @@ html {
 }
 
 .quote .container .content-section-quote span {
-    font-weight: 600;
+    font-weight: var(--semibold-weight);
     font-size: 13px;
 }
 
@@ -1304,7 +1300,7 @@ html {
 }
 
 .pricing .container .content-section-pricing .col .header span {
-    font-weight: 600;
+    font-weight: var(--semibold-weight);
     font-size: 59.48px;
     line-height: 1.5;
     color: var(--third-color);
@@ -1313,7 +1309,7 @@ html {
 
 .pricing .container .content-section-pricing .col .header span::before {
     content: "$";
-    font-weight: 600;
+    font-weight: var(--semibold-weight);
     font-size: 20.53px;
     line-height: 1.5;
     color: var(--third-color);
@@ -1324,7 +1320,7 @@ html {
 
 .pricing .container .content-section-pricing .col .header span::after {
     content: "/Mo";
-    font-weight: 600;
+    font-weight: var(--semibold-weight);
     font-size: 13px;
     line-height: 1.2;
     color: var(--third-color);
@@ -1375,8 +1371,8 @@ html {
     font-size: 16px;
     line-height: 1.5;
     color: var(--third-color);
-    margin: 30px auto;
-    transition: all 0.3s;
+    margin: 30px auto 0;
+    transition: all var(----main-transition);
 }
 
 .pricing .container .content-section-pricing .col .footer a:hover {
@@ -1405,10 +1401,6 @@ html {
     }
 }
 
-.pricing .container .contact {
-    margin-top: var(--section-padding);
-}
-
 .pricing .container .contact .conttent-section-contact {
     text-align: center;
 }
@@ -1417,7 +1409,7 @@ html {
     font-weight: 400;
     font-size: 20px;
     color: var(--third-color);
-    margin: 0 0 20px 0;
+    margin: 60px 0 20px 0;
 }
 
 .pricing .container .contact .conttent-section-contact a {
@@ -1466,7 +1458,7 @@ html {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgb(23 33 56 / 70%);
+    background-color: var(--overlay-background);
 }
 
 .subscribe .container .content-section-subscribe {
@@ -1481,7 +1473,7 @@ html {
 
 .subscribe .container .content-section-subscribe form input::placeholder {
     text-transform: uppercase;
-    color: white;
+    color: var(--white-color);
     font-weight: 400;
     font-size: 13px;
 }
@@ -1490,7 +1482,6 @@ html {
     flex: 1;
     background-color: transparent;
     border: 1px solid var(--white-color);
-    outline: none;
     background-image: url('../images/envelope-regular.svg');
     background-position: 11px 11px;
     background-repeat: no-repeat;
@@ -1500,6 +1491,7 @@ html {
 
 .subscribe .container .content-section-subscribe form input[type="email"]:focus {
     border-radius: 0;
+    outline: none;
 }
 
 .subscribe .container .content-section-subscribe form input[type="submit"] {
@@ -1512,6 +1504,7 @@ html {
     font-size: 13px;
     font-weight: 400;
     letter-spacing: 0.65px;
+    text-transform: uppercase;
 }
 
 .subscribe .container .content-section-subscribe p {
@@ -1545,3 +1538,228 @@ html {
 }
 
 /* End Subscribe */
+/* Start Contact Us  */
+.contact-us {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.contact-us .container .content-section-contact-us {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.contact-us .container .content-section-contact-us .part-info .part-info-top h4 {
+    margin: 0 0 20px 0;
+}
+
+.contact-us .container .content-section-contact-us .part-info .part-info-top h4,
+.contact-us .container .content-section-contact-us .part-info .part-info-bottom h4,
+.contact-us .container .content-section-contact-us form ::placeholder {
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.65px;
+    color: var(--third-color);
+    text-transform: uppercase;
+}
+
+.contact-us .container .content-section-contact-us .part-info .part-info-top p,
+.contact-us .container .content-section-contact-us .part-info .part-info-bottom address {
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.65px;
+    color: #a8a8a8;
+    margin: 0;
+    line-height: 1.8;
+}
+
+.contact-us .container .content-section-contact-us .part-info .part-info-bottom h4 {
+    margin: 60px 0 20px 0;
+}
+
+.contact-us .container .content-section-contact-us form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-us .container .content-section-contact-us form input,
+.contact-us .container .content-section-contact-us form textarea {
+    border: 1px solid var(--third-color);
+}
+
+.contact-us .container .content-section-contact-us form input:focus,
+.contact-us .container .content-section-contact-us form textarea:focus {
+    outline: none;
+}
+
+.contact-us .container .content-section-contact-us form input:not(input[type="submit"]),
+.contact-us .container .content-section-contact-us form textarea {
+    width: 100%;
+    padding: 20px;
+    caret-color: var(--third-color);
+}
+
+.contact-us .container .content-section-contact-us form input[type="submit"] {
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+    padding: 15px;
+    display: block;
+    margin-left: auto;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border: 1px solid var(--main-color);
+    cursor: pointer;
+    transition: color var(----main-transition);
+}
+
+.contact-us .container .content-section-contact-us form input[type="submit"]:hover {
+    color: var(--third-color);
+}
+
+.contact-us .container .content-section-contact-us form textarea {
+    height: 180px;
+    resize: none;
+}
+
+@media (min-width: 768px) {
+    .contact-us .container .content-section-contact-us {
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+        text-align: initial;
+    }
+
+    .contact-us .container .content-section-contact-us .part-info {
+        order: 2;
+        flex-basis: 25%;
+    }
+
+    .contact-us .container .content-section-contact-us .part-info .part-info-bottom h4 {
+        margin-top: 78px;
+    }
+
+    .contact-us .container .content-section-contact-us form {
+        flex-basis: 70%;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .contact-us .container .content-section-contact-us .part-info .part-info-top h4,
+    .contact-us .container .content-section-contact-us .part-info .part-info-bottom h4,
+    .contact-us .container .content-section-contact-us .part-info .part-info-top p,
+    .contact-us .container .content-section-contact-us .part-info .part-info-bottom address,
+    .contact-us .container .content-section-contact-us form input[type="submit"],
+    .contact-us .container .content-section-contact-us form ::placeholder {
+        font-size: 15px;
+    }
+
+    .contact-us .container .content-section-contact-us .part-info .part-info-bottom h4 {
+        margin-top: 68px;
+    }
+}
+
+/* End Contact Us  */
+
+/* Start Footer  */
+footer {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url("../images/footer.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--overlay-background);
+}
+
+footer .container .content-section-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: var(--white-color);
+}
+
+footer .container .content-section-footer .logo {
+    display: block;
+}
+
+footer .container .content-section-footer .logo img {
+    height: 40px;
+}
+
+footer .container .content-section-footer h3 {
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 40px 0;
+    position: relative;
+}
+
+footer .container .content-section-footer h3::before {
+    content: "";
+    position: absolute;
+    background-color: var(--white-color);
+    width: 200px;
+    height: 1px;
+    bottom: -19.5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer .container .content-section-footer .social-links {
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer .container .content-section-footer .social-links i {
+    font-size: 20px;
+}
+
+footer .container .content-section-footer .copyright {
+    font-weight: var(--semibold-weight);
+    font-size: 15px;
+    margin: 60px 0 0 0;
+}
+
+footer .container .content-section-footer .copyright span {
+    color: var(--main-color);
+}
+
+@media (min-width: 992px) {
+
+    footer .container .content-section-footer .social-links,
+    footer .container .content-section-footer h3::before {
+        width: 250px;
+    }
+
+    footer .container .content-section-footer h3,
+    footer .container .content-section-footer .social-links i {
+        font-size: 25px;
+    }
+
+    footer .container .content-section-footer .copyright {
+        font-size: 20px;
+    }
+
+}
+
+/* End Footer  */
