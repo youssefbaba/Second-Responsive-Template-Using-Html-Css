@@ -1377,7 +1377,7 @@ html {
     font-size: 16px;
     line-height: 1.5;
     color: var(--third-color);
-    margin: 30px auto 0;
+    margin: 30px auto 30px auto;
     transition: all var(----main-transition);
 }
 
@@ -1473,7 +1473,6 @@ html {
 }
 
 .subscribe .container .content-section-subscribe form {
-    width: 100%;
     display: flex;
 }
 
@@ -1493,6 +1492,7 @@ html {
     background-repeat: no-repeat;
     padding: 15px 0 15px 45px;
     caret-color: var(--white-color);
+    font-size: 13px;
 }
 
 .subscribe .container .content-section-subscribe form input[type="email"]:focus {
