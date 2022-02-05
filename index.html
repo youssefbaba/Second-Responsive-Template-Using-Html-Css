@@ -30,12 +30,12 @@
                 <nav class="navigation">
                     <i class="fas fa-bars icon-menu" onclick="myFunction()"></i>
                     <ul id="id-links" class="links">
-                        <li><a href="#home" class="active">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home" class="active" onclick="Hide()">Home</a></li>
+                        <li><a href="#services" onclick="Hide()">Services</a></li>
+                        <li><a href="#portfolio" onclick="Hide()">Portfolio</a></li>
+                        <li><a href="#about" onclick="Hide()">About</a></li>
+                        <li><a href="#pricing" onclick="Hide()">Pricing</a></li>
+                        <li><a href="#contact" onclick="Hide()">Contact</a></li>
                     </ul>
                     <i class="fas fa-search icon-search"></i>
                 </nav>
@@ -271,7 +271,7 @@
     </div>
     <!-- End Video -->
     <!-- Start About Us -->
-    <div class="about-us">
+    <div class="about-us" id="about">
         <div class="container">
             <div class="intro-section">
                 <h2>About Us</h2>
@@ -390,7 +390,7 @@
                         </div>
                     </div>
                     <div class="content-progress">
-                        <h4>Php</h4>
+                        <h4>.Net</h4>
                         <div class="progress" data-progress="87%">
                             <span style="width: 87%;"></span>
                         </div>
@@ -415,7 +415,7 @@
     </div>
     <!-- End Quote -->
     <!-- End Pricing -->
-    <div class="pricing">
+    <div class="pricing" id="pricing">
         <div class="container">
             <div class="intro-section">
                 <h2>Pricing</h2>
@@ -520,7 +520,7 @@
     </div>
     <!-- End Subscribe -->
     <!-- Start Contact Us -->
-    <div class="contact-us">
+    <div class="contact-us" id="contact">
         <div class="container">
             <div class="intro-section">
                 <h2>Contact Us</h2>
@@ -571,10 +571,10 @@
                 <a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
                 <h3>We are social</h3>
                 <div class="social-links">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-google-plus-g"></i>
-                    <i class="fab fa-dribbble"></i>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"> <i class="fab fa-twitter"></i></a>
+                    <a href="#"> <i class="fab fa-google-plus-g"></i></a>
+                    <a href="#"> <i class="fab fa-dribbble"></i></a>
                 </div>
                 <p class="copyright">
                     &#169; 2022 - <span>Kasper</span> All Right Reserved
@@ -586,6 +586,11 @@
 
     <script>
         function myFunction() {
+            var element = document.getElementById("id-links");
+            element.classList.toggle("show");
+        }
+
+        function Hide() {
             var element = document.getElementById("id-links");
             element.classList.toggle("show");
         }

@@ -180,8 +180,8 @@ html {
     top: 100%;
     left: 0;
     width: 100%;
-    display: none;
     z-index: 3;
+    display: none;
 }
 
 .home header .container nav.navigation ul.show {
@@ -903,6 +903,12 @@ html {
     align-items: center;
     border-radius: 50%;
     font-size: 20px;
+    cursor: pointer;
+    transition: background-color var(--main-transition);
+}
+
+.static .container .statics .box i:hover {
+    background-color: var(--main-color);
 }
 
 .static .container .statics .box span {
@@ -1507,6 +1513,10 @@ html {
     text-transform: uppercase;
 }
 
+.subscribe .container .content-section-subscribe form input[type="submit"]:hover {
+    background-color: rgba(0, 197, 252, 0.8);
+}
+
 .subscribe .container .content-section-subscribe p {
     font-weight: 400;
     font-size: 13px;
@@ -1730,8 +1740,15 @@ footer .container .content-section-footer .social-links {
     justify-content: space-evenly;
 }
 
-footer .container .content-section-footer .social-links i {
+footer .container .content-section-footer .social-links a {
+    text-decoration: none;
+    color: var(--white-color);
     font-size: 20px;
+    transition: color var(--main-transition);
+}
+
+footer .container .content-section-footer .social-links a:hover {
+    color: var(--main-color);
 }
 
 footer .container .content-section-footer .copyright {
